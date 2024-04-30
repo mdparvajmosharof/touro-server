@@ -43,10 +43,10 @@ async function run() {
       res.send(result);
     })
     
-    app.get("/find/:cost", async(req, res)=> {
-      const result = await spotsCollection.find({cost: req.params.cost}).toArray();
-      res.send(result);
-    })
+    // app.get("/find/:cost", async(req, res)=> {
+    //   const result = await spotsCollection.find({cost: req.params.cost}).toArray();
+    //   res.send(result);
+    // })
 
     app.get("/myspots/:email", async (req, res) => {
       const result = await spotsCollection

@@ -48,12 +48,12 @@ async function run() {
       res.send(result);
     })
 
-    // app.get("/myspots/:email", async (req, res) => {
-    //   const result = await spotsCollection
-    //     .find({ email: req.params.email })
-    //     .toArray();
-    //   res.send(result);
-    // });
+    app.get("/myspots/:email", async (req, res) => {
+      const result = await spotsCollection
+        .find({ email: req.params.email })
+        .toArray();
+      res.send(result);
+    });
 
 
 

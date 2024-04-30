@@ -37,23 +37,23 @@ async function run() {
       res.send(result);
     })
 
-    // app.get("/country/:countryName", async(req, res)=> {
-    //   const result = await spotsCollection.find({countryName : req.params.countryName}).toArray();
-    //   console.log(req.params.countryName);
-    //   res.send(result);
-    // })
+    app.get("/country/:countryName", async(req, res)=> {
+      const result = await spotsCollection.find({countryName : req.params.countryName}).toArray();
+      console.log(req.params.countryName);
+      res.send(result);
+    })
     
     app.get("/find/:cost", async(req, res)=> {
       const result = await spotsCollection.find({cost: req.params.cost}).toArray();
       res.send(result);
     })
 
-    app.get("/myspots/:email", async (req, res) => {
-      const result = await spotsCollection
-        .find({ email: req.params.email })
-        .toArray();
-      res.send(result);
-    });
+    // app.get("/myspots/:email", async (req, res) => {
+    //   const result = await spotsCollection
+    //     .find({ email: req.params.email })
+    //     .toArray();
+    //   res.send(result);
+    // });
 
 
 

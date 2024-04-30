@@ -32,10 +32,10 @@ async function run() {
       res.send(result);
     })
 
-    app.get('/country', async(req, res)=>{
-      const result = await countryCollection.find().toArray();
-      res.send(result);
-    })
+    // app.get('/country', async(req, res)=>{
+    //   const result = await countryCollection.find().toArray();
+    //   res.send(result);
+    // })
 
     app.get("/country/:countryName", async(req, res)=> {
       const result = await spotsCollection.find({countryName : req.params.countryName}).toArray();

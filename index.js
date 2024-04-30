@@ -120,7 +120,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("This is the main section");
+  res.send("This is server site");
 });
 
 app.listen(port, (req, res) => {
